@@ -8,10 +8,10 @@ import { WeightModule } from './weight/weight.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres', // type of our database
-      host: 'localhost', // database host
+      host: 'dpg-d2ni1tvdiees73cn4k40-a', // database host
       port: 5432, // database host
-      username: 'postgres', // username
-      password: 'pass123', // user password
+      username: 'mattdeba', // username
+      password: 'G3Ash5lmCaUD3wxr7wAxaJmKjKTzgwHE', // user password
       database: 'trackweight', // name of our database,
       autoLoadEntities: true, // models will be loaded automatically
       synchronize: true, // your entities will be synced with the database(recommended: disable in prod)
