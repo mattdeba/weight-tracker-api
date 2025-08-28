@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 # Installer uniquement les dépendances nécessaires pour le build
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
+RUN npm install --force
 
 # Copier le code source et compiler
 COPY . .
@@ -19,7 +19,7 @@ WORKDIR /usr/src/app
 
 # Copier uniquement ce qui est nécessaire à l’exécution
 COPY package*.json ./
-RUN npm install --only=production --legacy-peer-deps
+RUN npm install --only=production --force
 
 # Copier les fichiers buildés depuis l’étape 1
 COPY --from=build /usr/src/app/dist ./dist
